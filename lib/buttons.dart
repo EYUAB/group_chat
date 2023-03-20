@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -7,11 +9,11 @@ import 'login_screen.dart';
 
 class Buttons extends StatelessWidget {
   String buttonType;
-  String route;
+ final VoidCallback onPressed;
   Color color;
    Buttons({
   required this.buttonType,
-  required this.route,
+  required this.onPressed,
   required this.color,
   }
   );
@@ -25,14 +27,15 @@ class Buttons extends StatelessWidget {
                 color: color,
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
-                  onPressed: () {
-                    //Go to login screen.
-                    Navigator.pushNamed(context, route);
-                  },
+                  onPressed: onPressed,
+                  // onPressed: () {
+                  //   //Go to login screen.
+                  //   Navigator.pushNamed(context, route);
+                  // },
                   minWidth: 200.0,
                   height: 42.0,
                   child: Text(
-                    buttonType,
+                    buttonType,style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),

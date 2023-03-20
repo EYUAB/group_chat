@@ -83,8 +83,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
             SizedBox(
               height: 48.0,
             ),
-            Buttons(buttonType: 'Login', route: LoginScreen.id,color: loginButton,),
-            Buttons(buttonType: 'Register', route: RegistrationScreen.id,color: registerButton,),
+            Buttons(buttonType: 'Log in', 
+            onPressed: (){
+              Navigator.pushNamed(context, LoginScreen.id);
+            },
+            color: loginButton,),
+            Buttons(buttonType: 'Register', 
+            onPressed: (){
+              Navigator.pushNamed(context, RegistrationScreen.id);
+            },
+            color: registerButton,),
             // Padding(
             //   padding: EdgeInsets.symmetric(vertical: 16.0),
             //   child: Material(
