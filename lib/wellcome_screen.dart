@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:group_chat/login_screen.dart';
 import 'package:group_chat/registration.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class WelcomeScreen extends StatefulWidget {
   
@@ -65,14 +66,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                     height: 60,
                   ),
                 ),
-                Text(
-                  'Group Chat',
-                  style: TextStyle(
+                DefaultTextStyle(style: TextStyle(
                     fontSize: 45.0,
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
+                  ),child:  AnimatedTextKit(
+                    pause: Duration(seconds: 5),
+                  //  repeatForever: true,
+                    animatedTexts: [
+                           TypewriterAnimatedText('Group Chat',),
+                  ],
                   ),
-                ),
+                  ),
+              
               ],
             ),
             SizedBox(
