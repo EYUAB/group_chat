@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+Color registerButton = Colors.blueAccent;
+Color loginButton=Colors.lightBlueAccent;
 const kSendButtonTextStyle = TextStyle(
   color: Colors.lightBlueAccent,
   fontWeight: FontWeight.bold,
