@@ -72,7 +72,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                   text: [
                     'Group Chat'
                   ],
-                  speed: Duration(milliseconds: 1000),
+                  speed: Duration(milliseconds: 200),
                   textStyle: TextStyle( fontSize: 45.0,
                   color: Colors.black,
                   fontWeight: FontWeight.w900,),
